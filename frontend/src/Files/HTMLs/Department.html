@@ -52,6 +52,12 @@
                 <a href="#">Read more...</a>
                 <p>Project 3 title: This project was completed recently.</p>
                 <a href="#">Read more...</a>
+                <p>Project 1 title: This project was completed recently.</p>
+                <a href="#">Read more...</a>
+                <p>Project 2 title: This project was completed recently.</p>
+                <a href="#">Read more...</a>
+                <p>Project 3 title: This project was completed recently.</p>
+                <a href="#">Read more...</a>
             </div>
 
             <!-- News Section -->
@@ -61,14 +67,15 @@
                 <p>The Centre announced a financial assistance of Rs 3,300 crore to both Telugu states.</p>
                 <p>DMK MP A. Raja pointed out that the Waqf Act was passed in 1913, which finds no ..</p>
                 <p>The government has announced new policies to improve urban infrastructure.</p>
+                <p>Some news related to department officers can be found here.</p>
+                <p>The Centre announced a financial assistance of Rs 3,300 crore to both Telugu states.</p>
+                <p>DMK MP A. Raja pointed out that the Waqf Act was passed in 1913, which finds no ..</p>
+                <p>The government has announced new policies to improve urban infrastructure.</p>
             </div>
         </div>
     </div>
 
     <div class="dashboard content">
-        <h1>
-         Department Name
-        </h1>
         <h2>
          Department Projects Overview:
         </h2>
@@ -77,7 +84,7 @@
           <h3>
            States benefits
           </h3>
-          <img alt="Pie chart showing state benefits" height="300" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-LmQ09WWGIGwOeeA4ArnRw0x5/user-uJPET5fjNenSso8wCETWVNOp/img-EezkozHGXUwxBcryT4YwCiXR.png?st=2024-09-12T07%3A49%3A17Z&amp;se=2024-09-12T09%3A49%3A17Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-12T00%3A02%3A27Z&amp;ske=2024-09-13T00%3A02%3A27Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=cjnBK/6Agf4DwE/qIFibZ52f1eSOBJKIMCS0ALQ56KY%3D" width="300"/>
+          <img alt="Pie chart showing state benefits" height="300" src="/front_end/src/Files/asserts/pie chart.png" width="400"/>
           <ul>
            <li>
             Tamil Nadu
@@ -100,7 +107,7 @@
           <h3>
            Projects completion
           </h3>
-          <img alt="Bar chart showing project completion" height="300" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-LmQ09WWGIGwOeeA4ArnRw0x5/user-uJPET5fjNenSso8wCETWVNOp/img-sdvoD8v4Xn1ql7G4qWURu8uQ.png?st=2024-09-12T07%3A49%3A19Z&amp;se=2024-09-12T09%3A49%3A19Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-12T00%3A06%3A22Z&amp;ske=2024-09-13T00%3A06%3A22Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=Slj%2Bc/ZlufCWjjjnXMLu14gNeFXNiD7saHHqwFCqkpc%3D" width="300"/>
+          <img alt="Bar chart showing project completion" height="300" src="/front_end/src/Files/asserts/Figure_1.png" />
          </div>
         </div>
         <div class="projects">
@@ -141,21 +148,22 @@
     <!-- JavaScript for Sidebar Toggle -->
     <script>
         function toggleMenu() {
-            var sidebar = document.getElementById('sidebar');
+            var sidebar = document.querySelector('.sidebar');
             var menuClose = document.querySelector('.menu-close');
-            var menuToggle = document.getElementById('menu-toggle');
-            
+            var menuToggle = document.querySelector('.menu-toggle');
+    
             // Toggle sidebar open/close
             sidebar.classList.toggle('open');
             menuClose.classList.toggle('open');
-
-            // Hide menu-toggle when sidebar is open
-            if (sidebar.classList.contains('open')) {
-                menuToggle.classList.add('hidden');
-            } else {
-                menuToggle.classList.remove('hidden');
-            }
+    
+            // Hide/show menu-toggle
+            menuToggle.classList.toggle('hidden');
         }
+    
+        // Show menu-toggle when menu-close is clicked
+        document.querySelector('.menu-close').addEventListener('click', function() {
+            document.querySelector('.menu-toggle').classList.remove('hidden');
+        });
     </script>
 </body>
 </html>
