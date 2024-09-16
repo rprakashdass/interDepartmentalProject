@@ -1,0 +1,250 @@
+<html></html>
+ <head>
+  <title>
+   UrbanGrid
+  </title>
+  <script src="https://unpkg.com/react/umd/react.development.js">
+  </script>
+  <script src="https://unpkg.com/react-dom/umd/react-dom.development.js">
+  </script>
+  <script src="https://unpkg.com/@babel/standalone/babel.js">
+  </script>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="/front_end/src/Files/CSS/index.css">
+ </head>
+ <body>
+  <div class="container mx-auto">
+   <div class="flex justify-between items-center py-4 border-b">
+    <div class="flex items-center">
+     <img alt="Government Logo" class="mr-4" height="50" src="/front_end/src/Files/asserts/emblem.png" width="50"/>
+     <div>
+      <h1 class="text-2xl font-bold">
+       UrbanGrid
+      </h1>
+      <p class="text-sm">
+       An government website for connecting government departments
+      </p>
+     </div>
+    </div>
+    <div class="flex items-center">
+     <input class="search-bar" placeholder="Search.." type="text"/>
+     <button class="search-button">
+      <i class="fas fa-search">
+      </i>
+     </button>
+     <button class="login-button" onclick="showOverlay()">Login</button>
+    </div>
+   </div>
+   <div class="overlay" id="loginOverlay">
+    <div class="container">
+        <div class="close-btn" onclick="hideOverlay()">X</div>
+        <div class="login-option">
+            <a href="Department.html"><p>Department Login</p></a>
+            <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-LmQ09WWGIGwOeeA4ArnRw0x5/user-uJPET5fjNenSso8wCETWVNOp/img-Eov5QJizYpQfORfgRNiPVANX.png?st=2024-09-12T03%3A53%3A37Z&amp;se=2024-09-12T05%3A53%3A37Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-11T20%3A29%3A52Z&amp;ske=2024-09-12T20%3A29%3A52Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=Qe6rexox5BgQgViP2x2kVRnhYdbHEiy%2B6b/l9hVSERY%3D" alt="Icon representing department login">
+        </div>
+        <div class="login-option">
+            <p>Employee Login</p>
+            <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-LmQ09WWGIGwOeeA4ArnRw0x5/user-uJPET5fjNenSso8wCETWVNOp/img-WwBE3GCpXB0dVx9zkckZF8NR.png?st=2024-09-12T03%3A53%3A35Z&amp;se=2024-09-12T05%3A53%3A35Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-11T23%3A18%3A09Z&amp;ske=2024-09-12T23%3A18%3A09Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=tx5yQPJQDBgrb4dtizgVn4ZfqKXlnzGLk1ocXAaux%2BI%3D" alt="Icon representing employee login">
+        </div>
+        <div class="login-option">
+            <p>Agency Login</p>
+            <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-LmQ09WWGIGwOeeA4ArnRw0x5/user-uJPET5fjNenSso8wCETWVNOp/img-pnJEY5WyMMFZNBM99kSMFYEM.png?st=2024-09-12T03%3A53%3A38Z&amp;se=2024-09-12T05%3A53%3A38Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-11T23%3A45%3A56Z&amp;ske=2024-09-12T23%3A45%3A56Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=2ycapBE%2BlXCn7EKcV1Q1Z2GsCOIQCZe1tCIb%2B5VaF6s%3D" alt="Icon representing agency login">
+        </div>
+        <div class="new-user">
+            New user ? <a href="#">Sign in</a>
+        </div>
+    </div>
+</div>
+
+   <div class="navbar flex justify-center mt-4 relative">
+    <a href="#">
+     <i class="fas fa-home">
+     </i>
+    </a>
+    <div class="dropdown relative">
+     <a href="#">
+      Departments
+      <i class="fas fa-caret-down">
+      </i>
+     </a>
+     <div class="dropdown-menu absolute">
+      <a href="/front_end/src/Files/HTMLs/civil.html">
+       Civil
+      </a>
+      <a href="#">
+       Road & Highways
+      </a>
+      <a href="#">
+       Water
+      </a>
+      <a href="#">
+       Gas
+      </a>
+      <a href="#">
+       Telecommunication
+      </a>
+      <a href="#">
+       Transport
+      </a>
+     </div>
+    </div>
+    <div class="dropdown relative">
+     <a href="#">
+      About us
+      <i class="fas fa-caret-down">
+      </i>
+     </a>
+     <div class="dropdown-menu absolute">
+      <a href="#">
+       Our Mission
+      </a>
+      <a href="#">
+       Our Team
+      </a>
+      <a href="#">
+       History
+      </a>
+     </div>
+    </div>
+    <div class="dropdown relative">
+     <a href="#">
+      Contact
+      <i class="fas fa-caret-down">
+      </i>
+     </a>
+     <div class="dropdown-menu absolute">
+      <a href="#">
+       Contact Form
+      </a>
+      <a href="#">
+       Office Locations
+      </a>
+      <a href="#">
+       Support
+      </a>
+     </div>
+    </div>
+   </div>
+   <div class="flex mt-4">
+    <img alt="Image of two government officials" class="mr-4" height="200" src="/front_end/src/Files/asserts/modi.jpg" width="300"/>
+    <div>
+     <p>
+      Government departments often hold press conferences to announce new projects, policy changes, or collaborations aimed at improving public services
+     </p>
+     <p>
+      Officials might discuss ongoing infrastructure projects, such as road construction, public transportation enhancements, or urban development plans.
+     </p>
+     <p>
+      Government representatives could be highlighting the implementation of new technologies in public services, such as digital platforms for citizen engagement or blockchain for transparency.
+     </p>
+     <p>
+      Discussions might include updates on social welfare initiatives, such as healthcare programs, educational or employment schemes designed to benefit the community.
+     </p>
+    </div>
+   </div>
+   <div class="mt-4">
+    <h2 class="font-bold">
+     Latest News :
+    </h2>
+   </div>
+   <div class="mt-4">
+    <h2 class="font-bold">
+     Quick Links
+    </h2>
+    <ul class="list-disc ml-5">
+     <li>
+      <a class="text-blue-500 hover:underline" href="#">
+       Link 1
+      </a>
+     </li>
+     <li>
+      <a class="text-blue-500 hover:underline" href="#">
+       Link 2
+      </a>
+     </li>
+     <li>
+      <a class="text-blue-500 hover:underline" href="#">
+       Link 3
+      </a>
+     </li>
+     <li>
+      <a class="text-blue-500 hover:underline" href="#">
+       Link 4
+      </a>
+     </li>
+    </ul>
+   </div>
+   <div class="mt-4">
+    <h2 class="font-bold">
+     Upcoming Projects :
+    </h2>
+   </div>
+   <div class="mt-4">
+    <h2 class="font-bold">
+     About Us
+    </h2>
+    <p>
+     UrbanGrid is dedicated to fostering collaboration and communication between various government departments. Our mission is to streamline processes, enhance transparency, and improve public services through innovative solutions and technology.
+    </p>
+    <p>
+     Our team consists of experienced professionals from diverse backgrounds, all committed to the common goal of serving the community and making government services more accessible and efficient.
+    </p>
+    <p>
+     Since our inception, we have been at the forefront of implementing digital platforms and tools that facilitate better governance and citizen engagement.
+    </p>
+   </div>
+   <div class="mt-4">
+    <h2 class="font-bold">
+     Contact Us
+    </h2>
+    <p>
+     If you have any questions, suggestions, or need support, please feel free to reach out to us through our contact form or visit one of our office locations. We are here to assist you and ensure that your experience with UrbanGrid is positive and productive.
+    </p>
+    <p>
+     <a class="text-blue-500 hover:underline" href="#">
+      Contact Form
+     </a>
+    </p>
+    <p>
+     <a class="text-blue-500 hover:underline" href="#">
+      Office Locations
+     </a>
+    </p>
+    <p>
+     <a class="text-blue-500 hover:underline" href="#">
+      Support
+     </a>
+    </p>
+   </div>
+   <footer class="mt-8 py-4 bg-gray-200 text-center">
+    <p>
+     &copy; 2023 UrbanGrid. All rights reserved.
+    </p>
+    <p>
+     <a class="text-blue-500 hover:underline" href="#">
+      Privacy Policy
+     </a>
+     |
+     <a class="text-blue-500 hover:underline" href="#">
+      Terms of Service
+     </a>
+     |
+     <a class="text-blue-500 hover:underline" href="#">
+      Contact Us
+     </a>
+    </p>
+   </footer>
+  </div>
+  <script>
+function showOverlay() {
+    document.getElementById('loginOverlay').style.display = 'flex'
+}
+
+function hideOverlay() {
+    document.getElementById('loginOverlay').style.display = 'none'
+}
+  </script>
+ </body>
+</html>
