@@ -86,12 +86,13 @@ body {
 }
 .overlay .login-option {
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 20px 0;
 }
 .overlay .login-option img {
     width: 50px;
     height: 50px;
+    margin-top:-30px;
 }
 .overlay .login-option p {
     font-size: 24px;
