@@ -20,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/rprakashdass/urban-connect/issues"
   },
-  "homepage": "https://github.com/rprakashdass/urban-connect#readme"
+  "homepage": "https://github.com/rprakashdass/urban-connect#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "nodemon": "^3.1.6"
+  }
 }
