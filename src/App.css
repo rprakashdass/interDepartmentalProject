@@ -1,0 +1,40 @@
+/* App.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.main-content {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  background-color: #f7f2e5;
+  height: 100vh;
+}
+
+.task-scheduler-section {
+  flex-basis: 70%;
+  padding-right: 20px;
+}
+
+.task-details-section {
+  flex-basis: 25%;
+}
+
+.task-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.filter-btn, .sort-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.filter-btn:hover, .sort-btn:hover {
+  background-color: #0056b3;
+}
